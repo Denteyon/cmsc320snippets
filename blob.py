@@ -33,6 +33,9 @@ def plot_learning_curve(axes=None, ylim=None, train_sizes, train_scores, test_sc
         axes[0].set_ylim(*ylim)
     axes[0].set_xlabel("Training examples")
     axes[0].set_ylabel("Score")
+    
+    # uncomment this and add parameters if you plan to use learning curve instead
+    # train_sizes, train_scores, test_scores, fit_times, _ = learning_curve(estimator, X, y, cv=cv, n_jobs=n_jobs, train_sizes=train_sizes, return_times=True)
 
     train_scores_mean = np.mean(train_scores, axis=1)
     train_scores_std = np.std(train_scores, axis=1)
